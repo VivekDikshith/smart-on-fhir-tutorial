@@ -27,7 +27,7 @@
     <script>
       FHIR.oauth2.authorize({
         'client_id': '9525005c-5c29-4902-a922-b15b4f87a50a',
-        'scope':  'patient/Patient.read patient/Observation.read launch online_access openid profile'
+        'scope':  'patient/Patient.read patient/Observation.rs?category=http://terminology.hl7.org/CodeSystem/observation-category|vital-signs launch online_access openid profile'
       });
     </script>
     <div class="spinner">
