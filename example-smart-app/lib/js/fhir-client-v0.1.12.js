@@ -17007,7 +17007,8 @@ function completeCodeFlow(params){
   var data = {
       code: params.code,
       grant_type: 'authorization_code',
-      redirect_uri: state.client.redirect_uri
+      redirect_uri: state.client.redirect_uri,
+      code_verifier:'test-smart-pkce'
   };
 
   var headers = {};
@@ -17418,7 +17419,9 @@ BBClient.authorize = function(params, errback){
       "scope="+encodeURIComponent(client.scope)+"&"+
       "redirect_uri="+encodeURIComponent(client.redirect_uri)+"&"+
       "state="+encodeURIComponent(state)+"&"+
-      "aud="+encodeURIComponent(params.server);
+      "aud="+encodeURIComponent(params.server)+"&"+
+	"code_challenge"+encodeURIComponent('4816a6850ae1759c8010d7b342027bbe6b4b77409f0b963980b3627a67a3139c')+"&"+
+	"code_challenge_method"+encodeURIComponent('S256');
     
     if (typeof client.launch !== 'undefined' && client.launch) {
        redirect_to += "&launch="+encodeURIComponent(client.launch);
