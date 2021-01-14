@@ -17008,7 +17008,7 @@ function completeCodeFlow(params){
       code: params.code,
       grant_type: 'authorization_code',
       redirect_uri: state.client.redirect_uri,
-      code_verifier:'dBjftJeZ4CVP-mB92K27uhbUJU1p1r_wW1gFWFOEjXk'
+      code_verifier:'n-puP9eNWiILJwDGlKhEGWfwGLJMST0UC0Xkvtkb9XE'
   };
 
   var headers = {};
@@ -17420,7 +17420,7 @@ BBClient.authorize = function(params, errback){
       "redirect_uri="+encodeURIComponent(client.redirect_uri)+"&"+
       "state="+encodeURIComponent(state)+"&"+
       "aud="+encodeURIComponent(params.server)+"&"+
-	"code_challenge="+encodeURIComponent('E9Melhoa2OwvFrEMTJguCHaoeK1t8URWbuGJSstw-cM')+"&"+
+	"code_challenge="+encodeURIComponent('uP54hnbJYy_8NRr7aFv51bhG6rMHvRQW7iKcuO_qEYM')+"&"+
 	"code_challenge_method="+encodeURIComponent('S256');
     
     if (typeof client.launch !== 'undefined' && client.launch) {
