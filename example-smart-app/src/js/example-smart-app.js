@@ -15,7 +15,7 @@
                     type: 'Observation',
                     query: {
                       category: {
-                        $or: ['http://terminology.hl7.org/CodeSystem/observation-category|vital-sign']
+                        $or: ['http://terminology.hl7.org/CodeSystem/observation-category|vital-signs']
                       }
                     }
                   });
@@ -23,7 +23,10 @@
         $.when(pt, obv).fail(onError);
 
         $.when(pt, obv).done(function(patient, obv) {
+          console.log(obv)
+          
           var byCodes = smart.byCodes(obv, 'code');
+          console.log(byCodes)
           var gender = patient.gender;
 
           var fname = '';
